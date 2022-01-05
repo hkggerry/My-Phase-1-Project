@@ -19,7 +19,7 @@ function renderDrink1(drinks){
     drink1.appendChild(imageTag)
 
     star1 = document.getElementById("star1")
-    star1.addEventListener("click",function(){
+    star1.addEventListener("mouseover",function(){
         alert("Ingredient includes: Tequila, Triple sec, Lime juice, Salt");
     })
 }
@@ -33,7 +33,7 @@ function renderDrink2(drinks){
     drink2.appendChild(imageTag)
 
     star2 = document.getElementById("star2")
-    star2.addEventListener("click",function(){
+    star2.addEventListener("mouseover",function(){
         alert("Ingredient includes: Tequila, Watermelon, Lime, Grapefruit juice, Mint");
     })
 }
@@ -47,7 +47,7 @@ function renderDrink3(drinks){
     drink3.appendChild(imageTag)
 
     star3 = document.getElementById("star3")
-    star3.addEventListener("click",function(){
+    star3.addEventListener("mouseover",function(){
         alert("Ingredient includes: Tequila, Strawberry schnapps, Triple sec, Lime juice, Strawberries, Salt");
     })
 }
@@ -105,3 +105,12 @@ function redMargaritas(){
 }
 
 redMargaritas()
+
+function hiddenDiscount(){
+    let emoji = document.getElementById("emoji")
+    emoji.addEventListener("dblclick",function(){
+        alert("Hidden 100% off discount applied")
+    });
+}
+
+hiddenDiscount()
