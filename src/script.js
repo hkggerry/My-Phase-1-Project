@@ -17,6 +17,11 @@ function renderDrink1(drinks){
     imageTag.src = drinks.strDrinkThumb
 
     drink1.appendChild(imageTag)
+
+    star1 = document.getElementById("star1")
+    star1.addEventListener("click",function(){
+        alert("Ingredient includes: Tequila, Triple sec, Lime juice, Salt");
+    })
 }
 
 function renderDrink2(drinks){
@@ -26,6 +31,11 @@ function renderDrink2(drinks){
     imageTag.src = drinks.strDrinkThumb
 
     drink2.appendChild(imageTag)
+
+    star2 = document.getElementById("star2")
+    star2.addEventListener("click",function(){
+        alert("Ingredient includes: Tequila, Watermelon, Lime, Grapefruit juice, Mint");
+    })
 }
 
 function renderDrink3(drinks){
@@ -35,6 +45,11 @@ function renderDrink3(drinks){
     imageTag.src = drinks.strDrinkThumb
 
     drink3.appendChild(imageTag)
+
+    star3 = document.getElementById("star3")
+    star3.addEventListener("click",function(){
+        alert("Ingredient includes: Tequila, Strawberry schnapps, Triple sec, Lime juice, Strawberries, Salt");
+    })
 }
 
 fetchDrinks()
