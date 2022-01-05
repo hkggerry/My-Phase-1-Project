@@ -1,28 +1,20 @@
-// const glyphStates = {
-//     "♡": "♥",
-//     "♥": "♡"
-//   };
-  
-//   const colorStates = {
-//     "red" : "",
-//     "": "red"
-//   };
-
-const BASE_URL = 'https://www.reddit.com/r/food/comments/n2t8k8/homemade_crunchwrap_supreme_and_fire_sauce/.json'
+const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
 
 function fetchDrinks(){
     fetch(BASE_URL)
     .then(res=>res.json())
-    .then (data => console.log(data))
-        // renderDrink2(data.drinks[1])
-        // renderDrink3(data.drinks[2])
+    .then (data => {
+        renderDrink1(data.drinks[0])
+        renderDrink2(data.drinks[5])
+        renderDrink3(data.drinks[4])
     }
+    )}
 
-function renderDrink1(data){
+function renderDrink1(drinks){
     const drink1 = document.getElementById("column1")
 
     const imageTag = document.createElement('img')
-    imageTag.src = data.children.data.thumbnail
+    imageTag.src = drinks.strDrinkThumb
 
     drink1.appendChild(imageTag)
 }
@@ -72,14 +64,7 @@ function createDiv3(){
 createDiv3();
 
 
-function crunchWrapSupreme(){
-    // let img = document.createElement("img");
-    // img.src = "images/TacoBell CrunchWrap Supreme.webp"
-    // let image = document.getElementById("Top1");
-    // image.classList.add("container");
-
-    // let containerC = document.getElementById("column1")
-    // containerC.appendChild(img);
+function houseMargaritas(){
 
     document.querySelector("#reload1")
         .addEventListener('click', () => {window.location.reload(true);
@@ -87,66 +72,21 @@ function crunchWrapSupreme(){
 }
 
 
-crunchWrapSupreme();
+houseMargaritas();
 
-    function softPotatoTaco(){
-    let img = document.createElement("img");
-    img.src = "images/Soft Potato Taco.jpeg"
-    let image2 = document.getElementById("Top2");
-    image2.classList.add("container");
-
-    let containerS = document.getElementById("column2")
-    containerS.appendChild(img);
+    function orangeMargaritas(){
 
     document.querySelector("#reload2")
         .addEventListener('click', () => {window.location.reload(true);
         });
 }
 
-softPotatoTaco()
+orangeMargaritas()
 
-function doritoLocosTaco(){
-    let img = document.createElement("img");
-    img.src = "images/Dorito Locos Taco.webp"
-    let image3 = document.getElementById("Top3");
-    image3.classList.add("container");
-
-    let containerD = document.getElementById("column3")
-    containerD.appendChild(img);
-
+function redMargaritas(){
     document.querySelector("#reload3")
         .addEventListener('click', () => {window.location.reload(true);
         });
 }
 
-doritoLocosTaco()
-
-// const articleHearts = document.querySelectorAll(".like-glyph");
-
-// function likeCallback(e) {
-//     const heart = e.target;
-//     mimicServerCall()
-//       .then(function(serverMessage){
-//         alert(serverMessage);
-//         heart.innerText = glyphStates[heart.innerText];
-//         heart.style.color = colorStates[heart.style.color];
-//       })
-//       .catch(function(error) {
-//         alert("Something went wrong!");
-//       });
-//   }
-
-//   for (const glyph of articleHearts) {
-//   glyph.addEventListener("click", likeCallback);
-// }
-
-// likeCallback(e);
-
-// function mimicServerCall() {
-//     return new Promise(function(resolve, reject) {
-//       setTimeout(function() {
-//         resolve();
-//       }, 300);
-//     });
-//   }
-// mimicServerCall();
+redMargaritas()
