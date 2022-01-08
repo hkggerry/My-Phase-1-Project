@@ -20,7 +20,7 @@ function renderDrink1(drinks){
 
     star1 = document.getElementById("star1")
     star1.addEventListener("mouseover",function(){
-        alert("Ingredient includes: Tequila, Triple sec, Lime juice, Salt");
+        alert("Ingredients include: "+drinks.strIngredient1+", "+drinks.strIngredient2+", "+drinks.strIngredient3+", "+drinks.strIngredient4);
     })
 }
 
@@ -34,7 +34,7 @@ function renderDrink2(drinks){
 
     star2 = document.getElementById("star2")
     star2.addEventListener("mouseover",function(){
-        alert("Ingredient includes: Tequila, Watermelon, Lime, Grapefruit juice, Mint");
+        alert("Ingredient includes: "+drinks.strIngredient1+", "+drinks.strIngredient2+", "+drinks.strIngredient3+", "+drinks.strIngredient4+", "+drinks.strIngredient5+", "+drinks.strIngredient6);
     })
 }
 
@@ -48,7 +48,7 @@ function renderDrink3(drinks){
 
     star3 = document.getElementById("star3")
     star3.addEventListener("mouseover",function(){
-        alert("Ingredient includes: Tequila, Strawberry schnapps, Triple sec, Lime juice, Strawberries, Salt");
+        alert("Ingredient includes: "+drinks.strIngredient1+", "+drinks.strIngredient2+", "+drinks.strIngredient3+", "+drinks.strIngredient4+", "+drinks.strIngredient5+", "+drinks.strIngredient6);
     })
 }
 
