@@ -16,10 +16,14 @@ function renderDrink1(drinks){
     const imageTag = document.createElement('img')
     imageTag.src = drinks.strDrinkThumb
 
-    drink1.appendChild(imageTag)
+    const pTag = document.createElement("p")
+    pTag.innerText = drinks.strDrink
 
-    star1 = document.getElementById("star1")
-    star1.addEventListener("mouseover",function(){
+    drink1.appendChild(imageTag)
+    drink1.appendChild(pTag)
+
+    star = document.querySelector("#star")
+    star.addEventListener("mouseover",()=>{
         alert("Ingredients include: "+drinks.strIngredient1+", "+drinks.strIngredient2+", "+drinks.strIngredient3+", "+drinks.strIngredient4);
     })
 }
@@ -30,10 +34,14 @@ function renderDrink2(drinks){
     const imageTag = document.createElement('img')
     imageTag.src = drinks.strDrinkThumb
 
+    const pTag = document.createElement("p")
+    pTag.innerText = drinks.strDrink
+
     drink2.appendChild(imageTag)
+    drink2.appendChild(pTag)
 
     star2 = document.getElementById("star2")
-    star2.addEventListener("mouseover",function(){
+    star2.addEventListener("mouseover",()=>{
         alert("Ingredient includes: "+drinks.strIngredient1+", "+drinks.strIngredient2+", "+drinks.strIngredient3+", "+drinks.strIngredient4+", "+drinks.strIngredient5+", "+drinks.strIngredient6);
     })
 }
@@ -44,46 +52,25 @@ function renderDrink3(drinks){
     const imageTag = document.createElement('img')
     imageTag.src = drinks.strDrinkThumb
 
+    const pTag = document.createElement("p")
+    pTag.innerText = drinks.strDrink
+
     drink3.appendChild(imageTag)
+    drink3.appendChild(pTag)
 
     star3 = document.getElementById("star3")
-    star3.addEventListener("mouseover",function(){
+    star3.addEventListener("mouseover",()=>{
         alert("Ingredient includes: "+drinks.strIngredient1+", "+drinks.strIngredient2+", "+drinks.strIngredient3+", "+drinks.strIngredient4+", "+drinks.strIngredient5+", "+drinks.strIngredient6);
     })
 }
 
 fetchDrinks()
 
-function createDiv(){
-    let div = document.createElement('div');
-    div.id = 'Top1';
-    document.body.appendChild(div);
-}
-
-createDiv();
-
-function createDiv2(){
-    let div2 = document.createElement('div');
-    div2.id = 'Top2';
-    document.body.appendChild(div2);
-}
-    
-createDiv2();
-
-function createDiv3(){
-    let div3 = document.createElement('div');
-    div3.id = 'Top3';
-    document.body.appendChild(div3);
-}
-    
-createDiv3();
-
-
 function houseMargaritas(){
 
-    document.querySelector("#reload1")
-        .addEventListener('click', () => {window.location.reload(true);
-        });
+    document.querySelector("#submit1").addEventListener('click', function(){
+    document.getElementById("submission").innerHTML="~~~~~~~~~~Order complete! House Margarita coming up~~~~~~~~~~"
+    })
 }
 
 
@@ -91,20 +78,20 @@ houseMargaritas();
 
     function orangeMargaritas(){
 
-    document.querySelector("#reload2")
-        .addEventListener('click', () => {window.location.reload(true);
-        });
-}
+        document.querySelector("#submit2").addEventListener('click', function(){
+            document.getElementById("submission").innerHTML="~~~~~~~~~~Order complete! Thanks a melon~~~~~~~~~~"
+        })
+    }
 
 orangeMargaritas()
 
 function redMargaritas(){
-    document.querySelector("#reload3")
-        .addEventListener('click', () => {window.location.reload(true);
-        });
+    document.querySelector("#submit3").addEventListener('click', function(){
+        document.getElementById("submission").innerHTML="~~~~~~~~~~Great Idea! Only the berry best~~~~~~~~~~"
+    })
 }
-
 redMargaritas()
+
 
 function hiddenDiscount(){
     let emoji = document.getElementById("emoji")
