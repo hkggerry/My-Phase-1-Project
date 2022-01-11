@@ -11,10 +11,10 @@ Customers can easily place orders for our 3 featuring margaritas online. Wesbite
 - "Click" - Order Button
     function houseMargaritas()
     function orangeMargaritas()
-    redMargaritas()
+    function redMargaritas()
 
 - "MouseDown" - Star Logo
-    star1.addEventListener("mouseover",function()
+    star.addEventListener("mouseover",function()
     star2.addEventListener("mouseover",function()
     star3.addEventListener("mouseover",function()
 
@@ -23,19 +23,8 @@ Customers can easily place orders for our 3 featuring margaritas online. Wesbite
     function hiddenDiscount()
 
 Interactivity:
-- Quantity dropdown menu 
-    <br><label for="quantity">Qty:</label>
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-              </select>
-
+When Order button is clicked, "Order received" texts appear on bottom of page
+    
 
 # Dependencies
 - Big Sur macOS
